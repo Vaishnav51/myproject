@@ -61,8 +61,13 @@ def get_response(search_term):
             'exclude_variantId': '',
             'compare_flag': '1',
         }
+        # proxies = {
+        #     "http": "http://10.10.1.10:3128",
+        #     "https": "https://10.10.1.10:1080",
+        # }
 
-        response = requests.get('https://www.gadgets360.com/search/ajax-suggest', params=params)
+
+        response = requests.get('https://www.gadgets360.com/search/ajax-suggest', params=params, proxies={})
         if response.json():
             return response.json()
 
