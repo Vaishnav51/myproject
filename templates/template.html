@@ -7,11 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/find_price/hello/hi" method="post">
+    <form action="/find_price/hello/hi/" method="post">
     {% csrf_token %}
         <!-- <label for="your_name">Your name: </label> -->
         <input id="your_name" type="text" name="model1" placeholder="Enter first model">
         <input id="your_place" type="text" name="model2" placeholder="Enter second model">
+        <input type="checkbox" id="data" name="fetchDatabase" value="1">
         <button type="submit" value="OK"> OK </button>
     </form>
 </body>
